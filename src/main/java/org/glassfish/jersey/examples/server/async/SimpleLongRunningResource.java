@@ -60,6 +60,7 @@ import javax.ws.rs.core.Response.Status;
 import jersey.repackaged.com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import org.glassfish.jersey.examples.server.async.data.Customer;
+import org.glassfish.jersey.examples.server.async.persistence.CustomerDao;
 import org.glassfish.jersey.examples.server.async.service.CustomerService;
 import org.glassfish.jersey.process.JerseyProcessingUncaughtExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,6 +90,8 @@ public class SimpleLongRunningResource {
     @Autowired
     private CustomerService customerService;
     
+    @Autowired
+    private CustomerDao customerDao;
     
     
     @POST
@@ -119,13 +122,8 @@ public class SimpleLongRunningResource {
     		Customer customer = null;
              
              public void run() {
-                 try {
-                	
-                 	customer = customerService.retrieve(id);
-                 	Thread.sleep(10000);
-                 } catch (InterruptedException ex) {
-                     LOGGER.log(Level.SEVERE, "Response processing interrupted", ex);
-                 }
+                 customer = customerService.retrieve(id);
+				//Thread.sleep(2000);
                  ar.resume(Response.status(Status.OK).entity(g.toJson(customer).toString()).type(MediaType.APPLICATION_JSON).build());
              }
          });
