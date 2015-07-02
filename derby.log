@@ -1,13 +1,18 @@
 ----------------------------------------------------------------
-Wed Jul 01 13:00:11 IST 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-014e-4885-e4a6-000002d2a410 
-on database directory memory:D:\Users\syerahma\workspace-3-fun\sample-jersey\simpleDb with class loader sun.misc.Launcher$AppClassLoader@4d24bd93 
-Loaded from file:/D:/Users/syerahma/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+Thu Jul 02 12:20:53 UTC 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-014e-4eb6-6732-000012f9bb90 
+on database directory memory:/home/codio/workspace/simpleDb with class loader WebappClassLoader
+  context: sample-jersey
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@7bdb3f6c
+ 
+Loaded from file:/home/codio/.parts/packages/tomcat/8.0.20/webapps/sample-jersey/WEB-INF/lib/derby-10.10.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.7.0_67-b01
-user.dir=D:\Users\syerahma\workspace-3-fun\sample-jersey
-os.name=Windows 7
+user.dir=/home/codio/workspace
+os.name=Linux
 os.arch=amd64
-os.version=6.1
+os.version=3.16.0-34-generic
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

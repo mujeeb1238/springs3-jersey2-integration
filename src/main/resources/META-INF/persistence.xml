@@ -10,7 +10,7 @@
 
 	    <properties>
 	        <!-- Provider-specific connection properties -->
-	        <property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:simpleDb;create=true"/>
+	        <!-- <property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:simpleDb;create=true"/> -->
 	        <!-- <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/myDb;create=true"/> -->
 	        <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
 	        <property name="javax.persistence.jdbc.user" value=""/>
